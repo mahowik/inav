@@ -187,5 +187,6 @@ struct accDev_s;
 const gyroFilterAndRateConfig_t * mpuChooseGyroConfig(uint8_t desiredLpf, uint16_t desiredRateHz);
 bool mpuGyroRead(struct gyroDev_s *gyro);
 bool mpuGyroReadScratchpad(struct gyroDev_s *gyro);
+bool mpuAccRead(struct accDev_s *acc);
 bool mpuAccReadScratchpad(struct accDev_s *acc);
 bool mpuTemperatureReadScratchpad(struct gyroDev_s *gyro, int16_t * data);
