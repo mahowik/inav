@@ -139,7 +139,7 @@ typedef void serialConsumer(uint8_t);
 //
 // configuration
 //
-void serialInit(bool softserialEnabled);
+void serialInit(bool softserialEnabled, serialPortIdentifier_e serialPortToDisable);
 void serialRemovePort(serialPortIdentifier_e identifier);
 uint8_t serialGetAvailablePortCount(void);
 bool serialIsPortAvailable(serialPortIdentifier_e identifier);

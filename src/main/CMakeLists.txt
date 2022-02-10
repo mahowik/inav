@@ -240,6 +240,8 @@ main_sources(COMMON_SRC
     drivers/resource.h
     drivers/rcc.c
     drivers/rcc.h
+    drivers/rx_pwm.c
+    drivers/rx_pwm.h
     drivers/rx_spi.c
     drivers/rx_spi.h
     drivers/serial.c
@@ -402,6 +404,8 @@ main_sources(COMMON_SRC
     rx/msp.h
     rx/msp_override.c
     rx/msp_override.h
+    rx/pwm.c
+    rx/pwm.h
     rx/frsky_crc.c
     rx/frsky_crc.h
     rx/rx.c

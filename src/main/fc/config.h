@@ -23,6 +23,7 @@
 #include "common/time.h"
 #include "config/parameter_group.h"
 #include "drivers/adc.h"
+#include "drivers/rx_pwm.h"
 #include "fc/stats.h"
 
 #define MAX_PROFILE_COUNT 3
