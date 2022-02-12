@@ -21,12 +21,15 @@
 
 #define USBD_PRODUCT_STRING  "MatekF4"
 
-#define LED0                    PB9
-//#define LED1                    PD12
-#define LED1                    PA14
+//#define LED0                    PB9
+//#define LED1                    PA14
+#define LED0                    PD15
+#define LED1                    PD12
+#define LED2                    PD13
+//#define LED2                    PD14
 
 #define BEEPER                  PC13
-#define BEEPER_INVERTED
+//#define BEEPER_INVERTED
 
 // *************** Gyro & ACC **********************
 //#define USE_SPI
@@ -89,15 +92,19 @@
 //#define MAX7456_CS_PIN          PB10
 
 // *************** UART *****************************
-#define USE_VCP
-//#define VBUS_SENSING_PIN        PB12
-//#define VBUS_SENSING_ENABLED
 
-#define USE_UART1
+#define USE_VCP
+#define VBUS_SENSING_PIN        PA9
+#define VBUS_SENSING_ENABLED
+
+//#define USE_UART_INVERTER
+
+//#define USE_UART1
 //#define UART1_RX_PIN            PA10  // busy pin (usb ID) on stm32F4Discovery
 //#define UART1_TX_PIN            PA9   // busy pin (usb VBUS) on stm32F4Discovery
-#define UART1_RX_PIN            PD2     // free I/O on stm32F4Discovery
-#define UART1_TX_PIN            PC12    // busy pin (Audio DAC SDIN) on stm32F4Discovery
+//#define UART1_RX_PIN            PB7
+//#define UART1_TX_PIN            PB6
+//#define INVERTER_PIN_UART1_TX   PB15
 
 #define USE_UART2
 #define UART2_RX_PIN            PA3     // free I/O on stm32F4Discovery
@@ -106,14 +113,33 @@
 #define USE_UART3
 #define UART3_RX_PIN            PC11    // free I/O on stm32F4Discovery
 #define UART3_TX_PIN            PC10    // [no conflict] busy pin (Audio DAC SCLK) on stm32F4Discovery
+//#define UART3_RX_PIN            PB11
+//#define UART3_TX_PIN            PB10      // [!!! disconnected] busy pin (Audio sensor CLK) on stm32F4Discovery
+//#define UART3_RX_PIN            PD9
+//#define UART3_TX_PIN            PD8
+//#define INVERTER_PIN_UART3_RX   PC8
+//#define INVERTER_PIN_UART3_TX   PC0
+//#define INVERTER_PIN_UART3_TX   PB15
 
 #define USE_UART4
 #define UART4_RX_PIN            PA1     // free I/O on stm32F4Discovery
 #define UART4_TX_PIN            PA0     // [no conflict] busy pin (Push button USER) on stm32F4Discovery
 
-//#define USE_UART5
-//#define UART5_RX_PIN            PD2
-//#define UART5_TX_PIN            PC12
+#define USE_UART5
+#define UART5_RX_PIN            PD2     // free I/O on stm32F4Discovery
+#define UART5_TX_PIN            PC12    // [no conflict] busy pin (Audio DAC SDIN) on stm32F4Discovery
+
+
+//#define USE_SOFTSERIAL1
+//#define SOFTSERIAL_1_RX_PIN     PB1
+//#define SOFTSERIAL_1_TX_PIN     PB0
+
+//#define USE_SOFTSERIAL1
+//#define SOFTSERIAL_1_RX_PIN     PA15 // S5
+//#define SOFTSERIAL_1_TX_PIN     PB8  // S7
+//#define USE_SOFTSERIAL2
+//#define SOFTSERIAL_2_RX_PIN     PA8 // S6
+//#define SOFTSERIAL_2_TX_PIN     PA4 // DAC
 
 //#define USE_SOFTSERIAL1
 //#define SOFTSERIAL_1_RX_PIN      PA1  //RX4
@@ -133,10 +159,19 @@
 
 // AIO / CTR / STD
 #define USE_I2C
-#define USE_I2C_DEVICE_1
 //#define USE_I2C_PULLUP
+
+#define USE_I2C_DEVICE_1
 #define I2C1_SCL                PB6
 #define I2C1_SDA                PB7
+
+//#define USE_I2C_DEVICE_2
+//#define I2C2_SCL                PB10
+//#define I2C2_SDA                PB11
+
+//#define USE_I2C_DEVICE_3
+//#define I2C3_SCL                PA8
+//#define I2C3_SDA                PC9
 
 #define DEFAULT_I2C_BUS         BUS_I2C1
 
@@ -190,7 +225,8 @@
 #define TARGET_IO_PORTA         0xffff
 #define TARGET_IO_PORTB         0xffff
 #define TARGET_IO_PORTC         0xffff
-#define TARGET_IO_PORTD         (BIT(2))
+//#define TARGET_IO_PORTD         (BIT(2))
+#define TARGET_IO_PORTD         0xffff
 
 #define USE_DSHOT
 #define USE_ESC_SENSOR
