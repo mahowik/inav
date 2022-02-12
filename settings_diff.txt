@@ -1,0 +1,114 @@
+
+# diff
+
+# version
+# INAV/MATEKF405 4.1.0 Feb 12 2022 / 16:32:21 (920bdb18)
+# GCC-10.2.1 20201103 (release)
+
+# start the command batch
+batch start
+
+# resources
+
+# mixer
+
+mmix reset
+
+mmix 0  1.000 -1.000  1.000 -1.000
+mmix 1  1.000 -1.000 -1.000  1.000
+mmix 2  1.000  1.000  1.000  1.000
+mmix 3  1.000  1.000 -1.000 -1.000
+
+# servo mix
+
+# servo
+
+# safehome
+
+# logic
+
+# gvar
+
+# pid
+
+# feature
+feature -TX_PROF_SEL
+feature -AIRMODE
+feature GPS
+feature PWM_OUTPUT_ENABLE
+
+# beeper
+
+# blackbox
+blackbox -NAV_ACC
+blackbox NAV_POS
+blackbox NAV_PID
+blackbox MAG
+blackbox ACC
+blackbox ATTI
+blackbox RC_DATA
+blackbox RC_COMMAND
+blackbox MOTORS
+
+# map
+
+# serial
+serial 1 2 115200 57600 0 115200
+serial 2 4 115200 115200 9600 115200
+
+# aux
+aux 0 0 2 1800 2100
+aux 1 1 2 1800 2100
+aux 2 11 0 1300 1700
+aux 3 10 0 1800 2100
+aux 4 3 2 1800 2100
+
+# adjrange
+
+# rxrange
+
+# temp_sensor
+
+# wp
+#wp 0 invalid
+
+# osd_layout
+
+# master
+set acc_hardware = MPU6050
+set acczero_x = 68
+set acczero_y = -25
+set acczero_z = -85
+set accgain_x = 4090
+set accgain_y = 4121
+set accgain_z = 4014
+set align_mag = CW0
+set mag_hardware = HMC5883
+set magzero_x = 4
+set magzero_y = -63
+set magzero_z = -219
+set maggain_x = 649
+set maggain_y = 591
+set maggain_z = 649
+set baro_hardware = MS5611
+set motor_pwm_rate = 50
+set motor_pwm_protocol = STANDARD
+set failsafe_procedure = RTH
+set model_preview_type = 3
+set applied_defaults = 1
+set gps_sbas_mode = WAAS
+set gps_ublox_use_galileo = ON
+set i2c_speed = 800KHZ
+
+# profile
+profile 1
+
+
+# battery_profile
+battery_profile 1
+
+
+# end the command batch
+batch end
+
+#
