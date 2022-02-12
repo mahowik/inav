@@ -28,8 +28,9 @@
 #define LED2                    PD13
 //#define LED2                    PD14
 
-#define BEEPER                  PC13
-//#define BEEPER_INVERTED
+//#define BEEPER                  PC13
+#define BEEPER                  PD14    // LED (RED) + beeper
+#define BEEPER_INVERTED
 
 // *************** Gyro & ACC **********************
 //#define USE_SPI
@@ -178,8 +179,8 @@
 
 #define USE_BARO
 #define BARO_I2C_BUS                DEFAULT_I2C_BUS
-//#define USE_BARO_BMP280
 #define USE_BARO_MS5611
+//#define USE_BARO_BMP280
 //#define USE_BARO_BMP085
 //#define USE_BARO_DPS310
 //#define USE_BARO_SPL06
@@ -187,6 +188,14 @@
 #define USE_MAG
 #define MAG_I2C_BUS                 DEFAULT_I2C_BUS
 #define USE_MAG_HMC5883
+//#define USE_MAG_AK8963
+//#define USE_MAG_AK8975
+//#define USE_MAG_QMC5883
+//#define USE_MAG_IST8310
+//#define USE_MAG_IST8308
+//#define USE_MAG_MAG3110
+//#define USE_MAG_LIS3MDL
+
 
 //#define TEMPERATURE_I2C_BUS         DEFAULT_I2C_BUS
 
