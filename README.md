@@ -1,3 +1,13 @@
+# This fork configured for STM32F4DISCOVERY (STM32F407 MCU) board + GY-86(MPU6050/HMC5883/MS5611) sensors + RC PPM
+
+- to build hex use MATEKF405 target (in command line: ./build.sh MATEKF405)
+- you can also find pre-builded hex file at "build/" folder: inav_4.1.0_STM32F4Discovery_GY-86_PPM_by_MATEKF405_target.hex   
+- if there is an issue with MPU6050 i2c init on 400KHz please make full erase -> upload inav_4.1.0_STM32F4Discovery-upload_if_mpu6050_i2c_400KHz_issue.hex first -> change i2c speed to 800 KHz at INAV Configurator -> upload inav_4.1.0_STM32F4Discovery_GY-86_PPM_by_MATEKF405_target.hex again
+- see src/main/target/MATEKF405/target.h for pinout or type "resource" command at inav CLI
+
+
+
+
 # INAV - navigation capable flight controller
 
 ![INAV](http://static.rcgroups.net/forums/attachments/6/1/0/3/7/6/a9088858-102-inav.png)
