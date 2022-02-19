@@ -1,8 +1,7 @@
-
-# diff
+diff
 
 # version
-# INAV/MATEKF405 4.1.0 Feb 12 2022 / 16:32:21 (920bdb18)
+# INAV/MATEKF405 4.1.0 Feb 19 2022 / 19:20:12 (bea76a84)
 # GCC-10.2.1 20201103 (release)
 
 # start the command batch
@@ -34,6 +33,7 @@ mmix 3  1.000  1.000 -1.000 -1.000
 # feature
 feature -TX_PROF_SEL
 feature -AIRMODE
+feature SOFTSERIAL
 feature GPS
 feature PWM_OUTPUT_ENABLE
 
@@ -54,7 +54,7 @@ blackbox MOTORS
 
 # serial
 serial 1 2 115200 57600 0 115200
-serial 2 4 115200 115200 9600 115200
+serial 30 4 115200 115200 9600 115200
 
 # aux
 aux 0 0 2 1800 2100
@@ -107,8 +107,9 @@ profile 1
 # battery_profile
 battery_profile 1
 
+set failsafe_throttle = 1200
 
 # end the command batch
 batch end
 
-#
+# 
