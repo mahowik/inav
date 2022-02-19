@@ -131,9 +131,9 @@
 #define UART5_TX_PIN            PC12    // [no conflict] busy pin (Audio DAC SDIN) on stm32F4Discovery
 
 
-//#define USE_SOFTSERIAL1
-//#define SOFTSERIAL_1_RX_PIN     PB1
-//#define SOFTSERIAL_1_TX_PIN     PB0
+#define USE_SOFTSERIAL1
+#define SOFTSERIAL_1_RX_PIN     PB1
+#define SOFTSERIAL_1_TX_PIN     PB0
 
 //#define USE_SOFTSERIAL1
 //#define SOFTSERIAL_1_RX_PIN     PA15 // S5
@@ -150,7 +150,7 @@
 //#define SOFTSERIAL_2_RX_PIN      PA2  //TX2
 //#define SOFTSERIAL_2_TX_PIN      PA2  //TX2
 
-#define SERIAL_PORT_COUNT       5
+#define SERIAL_PORT_COUNT       6
 
 #define DEFAULT_RX_TYPE         RX_TYPE_PPM
 //#define SERIALRX_PROVIDER       SERIALRX_SBUS
