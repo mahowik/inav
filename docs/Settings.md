@@ -2148,7 +2148,7 @@ Calculated 1G of Acc axis Z to use in INS
 
 | Default | Min | Max |
 | --- | --- | --- |
-| 0.0 | 0 | 1000 |
+| 0.0 | 0 | 2000 |
 
 ---
 
@@ -2932,6 +2932,16 @@ Enable the possibility to manually increase the throttle in auto throttle contro
 
 ---
 
+### nav_fw_auto_disarm_delay
+
+Delay before plane disarms when `nav_disarm_on_landing` is set (ms)
+
+| Default | Min | Max |
+| --- | --- | --- |
+| 2000 | 100 | 10000 |
+
+---
+
 ### nav_fw_bank_angle
 
 Max roll angle when rolling / turning in GPS assisted modes, is also restrained by global max_angle_inclination_rll
@@ -3444,7 +3454,7 @@ Max allowed above the ground altitude for terrain following mode
 
 ### nav_mc_auto_disarm_delay
 
-Delay before multi-rotor disarms when `nav_disarm_on_landing` is set (m/s)
+Delay before multi-rotor disarms when `nav_disarm_on_landing` is set (ms)
 
 | Default | Min | Max |
 | --- | --- | --- |
@@ -3764,11 +3774,11 @@ If GPS fails wait for this much seconds before switching to emergency landing mo
 
 ### nav_rth_abort_threshold
 
-RTH sanity checking feature will notice if distance to home is increasing during RTH and once amount of increase exceeds the threshold defined by this parameter, instead of continuing RTH machine will enter emergency landing, self-level and go down safely. Default is 500m which is safe enough for both multirotor machines and airplanes. [cm]
+RTH sanity checking feature will notice if distance to home is increasing during RTH and once amount of increase exceeds the threshold defined by this parameter, instead of continuing RTH machine will enter emergency landing, self-level and go down safely. Default is 500m which is safe enough for both multirotor machines and airplanes. Set to 0 to disable. [cm]
 
 | Default | Min | Max |
 | --- | --- | --- |
-| 50000 |  | 65000 |
+| 50000 | 0 | 65000 |
 
 ---
 
